@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <!-- Custom CSS -->
+        <title>Settings</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <style>
+            body,h1,h2,h3,h4,h5,a {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-sidebar {
+                font-family: "Raleway", sans-serif;
+                font-size:150%;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center w3-card" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+            <h3 class="w3-padding-64 w3-center"><b>SOME<br>NAME</b></h3>
+            <a href="index.html" onclick="w3_close_sidebar()" class="w3-bar-item w3-button">HOME</a>
+            <a href="javascript:void(0)" onclick="w3_close_sidebar()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+            <a href="settings.html" onclick="w3_close_sidebar()" class="w3-bar-item w3-button">SETTINGS</a>
+        </nav>
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+              <!-- Right-sided navbar links. Hide them on small screens -->
+              <div class="w3-right">
+                <a href="#about" onclick="w3_open_appearance_info(); w3_close_language_info(); w3_close_accessibility_info()" class="w3-bar-item w3-button">Appearance</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="w3-top w3-hide-large" style="padding-top:80px;">
+            <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+              <!-- Right-sided navbar links. Hide them on small screens -->
+              <div class="w3-right">
+                <a href="appearance" onclick="w3_open_appearance_info(); w3_close_language_info(); w3_close_accessibility_info()" class="w3-bar-item w3-button">Appearance</a>
+              </div>
+            </div>
+        </div>
+
+        <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16  w3-card">
+            <span class="w3-left w3-padding">SOME NAME</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open_sidebar()">☰</a>
+        </header>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close_sidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens --> 
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        
+
+        <div id="myAppearanceInfo">
+            <div id="color-scheme">
+                gives different color palettes and when clicked changes the color scheme to that palette
+            </div>
+            <div id="font-size">
+                takes a value and increases the text to that size
+            </div>
+        </div>
+        <script>
+            // Script to open and close sidebar
+            function w3_open_sidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+            }
+            
+            function w3_close_sidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+            }
+
+            function w3_open_appearance_info() {
+            document.getElementById("myAppearanceInfo").style.display = "block";
+            }
+
+            function w3_close_appearance_info() {
+            document.getElementById("myAppearanceInfo").style.display = "none";
+            }
+
+            </script>
+    </body>
+</html>
